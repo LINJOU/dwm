@@ -1,6 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 #include "gaplessgrid.c"
 #include "tatami.c"
+#include "movestack.c"
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
@@ -94,6 +95,8 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_j,      movestack,      {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_k,      movestack,      {.i = -1 } },
 	{ ControlMask,                  XK_h,      setmfact,       {.f = -0.05} },
 	{ ControlMask,                  XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_f,      fullscreen,     {0} },
