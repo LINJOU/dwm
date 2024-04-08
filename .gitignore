@@ -1,4 +1,6 @@
 /patches
 *.rej
 *orig
+*.o
+dwn
 config.h
