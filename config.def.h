@@ -62,6 +62,8 @@ static const Layout layouts[] = {
 
 /* commands */
 static const char *termcmd[]  = { "st", NULL };
+static const char scratchpadname[] = "scratchpad";
+static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "80x20", NULL };
 static const char *rofi[]  = { "rofi", "-show", "drun", "-theme", "rounded-nord-dark", NULL };
 static const char *bower[]  = { "microsoft-edge-stable", NULL };
 static const char *volup[]  = { "amixer", "sset", "Master", "5%+", "umute", NULL };
@@ -74,6 +76,7 @@ static const char *yazi[]  = { "st", "-e", "yazi", NULL };
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY,                       XK_t,  togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_r,      spawn,          {.v = rofi } },
 	{ MODKEY,                       XK_w,      spawn,          {.v = bower } },
 	{ ControlMask,                  XK_o,      spawn,          {.v = volup } },
