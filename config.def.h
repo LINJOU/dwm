@@ -10,17 +10,18 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const Bool viewontag         = True;     /* Switch view on tag switch */
 static const char *fonts[]          = { "ComicShannsMono Nerd Font:size=10" };
-static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#ffffff";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#005577";
+static const char col_black[]       = "#4C566A";
+static const char col_yellow[]      = "#EBCB8B";
+static const char col_white[]       = "#E5E9F0";
+static const char col_green[]       = "#A3BE8c";
+static const char col_blue[]        = "#81A1C1";
 static const unsigned int baralpha = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
-	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray2, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	/*               fg          bg         border   */
+	[SchemeNorm]   = { col_white,  col_black, col_black },
+	[SchemeSel]    = { col_green,  col_black, col_green },
+	[SchemeLayout] = { col_blue,   col_black, col_black },
 };
 static const unsigned int alphas[][3]      = {
     /*               fg      bg        border*/
