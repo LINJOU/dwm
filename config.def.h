@@ -26,9 +26,11 @@ static const char *colors[][3]      = {
 	[SchemeXsetroot] = { col_white_x, col_black, col_black },
 };
 static const unsigned int alphas[][3]      = {
-    /*               fg      bg        border*/
-    [SchemeNorm] = { OPAQUE, baralpha, borderalpha },
-	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
+    /*                      fg      bg        border*/
+    [SchemeNorm]      = { OPAQUE, baralpha, borderalpha },
+	[SchemeSel]       = { OPAQUE, baralpha, borderalpha },
+	[SchemeLayout]    = { OPAQUE, baralpha, borderalpha },
+	[SchemeXsetroot]  = { OPAQUE, baralpha, borderalpha },
 };
 
 /* tagging */
