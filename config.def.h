@@ -19,7 +19,7 @@ static const unsigned int baralpha = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
+	[SchemeNorm] = { col_gray3, col_gray2, col_gray2 },
 	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
 };
 static const unsigned int alphas[][3]      = {
@@ -48,9 +48,9 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
- 	{ "󰡃",        tatami },    /* first entry is default */
-	{ "󰕳",		  gaplessgrid },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
+ 	{ " 󰡃",        tatami },    /* first entry is default */
+	{ " 󰕳",		   gaplessgrid },    /* no layout function means floating behavior */
+	{ " 󰝤",      monocle },
 	
 };
 
@@ -67,6 +67,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static const char *termcmd[]  = { "st", NULL };
+static const char *alacritty[]  = { "alacritty", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "80x20", NULL };
 static const char *rofi[]  = { "rofi", "-show", "drun", "-theme", "rounded-nord-dark", NULL };
@@ -81,6 +82,7 @@ static const char *yazi[]  = { "st", "-e", "yazi", NULL };
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY,                       XK_a,      spawn,          {.v = alacritty } },
 	{ MODKEY,                       XK_t,      togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_r,      spawn,          {.v = rofi } },
 	{ MODKEY,                       XK_w,      spawn,          {.v = bower } },
