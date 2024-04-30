@@ -9,7 +9,7 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const Bool viewontag         = True;     /* Switch view on tag switch */
-static const char *fonts[]          = { "ComicShannsMono Nerd Font:size=10" };
+static const char *fonts[]          = { "ComicShannsMono Nerd Font:size=10:style=Bold" };
 static const char col_black[]       = "#2E3440";
 static const char col_yellow[]      = "#EBCB8B";
 static const char col_white[]       = "#E5E9F0";
